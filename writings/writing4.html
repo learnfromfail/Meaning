@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+    <html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+        <link rel="stylesheet" href="../css/t5.css?version=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+        <META HTTP-EQUIV="EXPIRES" CONTENT="0">
+        <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+        <style>
+            table,tr,th,td{
+                border:1px solid white;;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div id="centerDiv">
+                <div style="height: 100%;writing-mode: vertical-rl;">
+                </div>
+                <div class="row">
+                    <span class="hori-grid smallHoriBanner">
+                        <span style="text-align: center;width: 100%;color: red;">＊陰陽＊知行＊自愛＊愛人＊</span>
+                    </span>
+                    <div class="writingPassage">
+                        <h2 style="color: white;">思考框架</h2>
+                        <br>
+                        思考是可以訓練的，將虛無的概念用發揮右腦的小宇宙＜圖像化＞（人是對色彩繽紛的視覺來得深刻，如果可以存在其他感官，則記憶會更具體），＜Brain storm＞然後 用＜腦圖＞來組織。這些你一定在學校，老師應該教過的。<br><br>
+                        <table style="margin-left: auto;margin-right: auto;">
+                            <tr><th colspan="2" style="color: bisque;">（Given）已知</th><th style="color:yellow">由你想像和創作之物（Not Given）</th></tr>
+                            <tr><th colspan="2" style="color: bisque;">陰陽(對立，分野)</th><th style="color:yellow">愛（合作，兩者連結之物，填補真空的關係）</th></tr>
+                            <tr><td>Subject</td><td>Object</td><td>Verb</td></tr>
+                            <tr><td>男</td><td>女</td><td>性和愛，魅力吸引，金錢，嬲字（字）</td></tr>
+                            <tr><td>太陽</td><td>月亮</td><td>地球，圍繞</td></tr>
+                            <tr><td>天</td><td>地</td><td>人，地球的萬物，動植物及死物</td></tr>
+                            <tr><td>出生</td><td>死亡</td><td>生命活動如：進食，排泄，繁殖，交配</td></tr>
+                            <tr><td>１</td><td>２</td><td>加減乘除，平均數1.5，過程：+1或(+3-2) 及 乘2</td></tr>
+                        </table>。<br>
+                        但有時，想像之物，並非兩事之連結，可能是只有一，先定義了一個零和點（是隨便定的），再聯想對立之事物。可能是有三或以上。一般而言，揉合其特點，各取其物質，完美而不突兀，充滿美感和溫柔和體諒地合而為一。<span style="color: red;">愛就是，溝通，合作，橋梁，連結，協同效應，闗係空白的填充，雙嬴。這也是本人的哲學。</span>陰陽哲學在中國很盛行了，什麼，太極，兩儀，三才，四像，五行，八卦... ... 數之不盡。（當中的六，七，九及以後，我就不知道了）
+                        <h2 style="color: white;">邊際利潤</h2>
+                        <br>
+                        沙漠裡的第一口水，是珍貴過第五十口水的，個肚飽和了。自助餐，每一款食啲，是好過只選擇一款的，因為會食得厭。
+                        經濟學的＜邊際利潤＞（補位，物以罕為貴），新加坡總理某次面對在野黨派挑戰，于是說過：正正是大家覺得沒有問題，我才覺得問題很嚴重。現實生活上，以整體利益（公義）為大局，于是主動補位的人，不多。很多人只活在自己的岡位上。
+                        <h2 style="color: white;">編程和演算法</h2>
+                        <br>
+                        蘋果教父，喬布斯講過編程公民廿一世紀必須要學的知識之一，含有大量代碼上的管理和分配，定義工具。編程上，常有Don't repeat yourself的概念，編程這么好玩，是極具低重覆性的，新奇工作，雖然只是在技術上，但卻<span style="color: yellow;">鍛練客觀思維</span>，是不可或缺的。以下我用部分正確的Java來簡介一下，戰棋遊戲如ＦＦＴＡ２，的codes是基本的皮毛。<br><br>
+                        <table style="margin-left: auto;margin-right: auto;">
+                            <tr><th>       
+                            <div style="white-space: pre;border:1px solid white;text-align: left;">
+Class Role{
+    String RoleName = "";
+    Int HP = 100;
+    Int MP = 100;
+    Int X = 0;
+    Int Y = 0;
+    
+    Attack(Role enemy){
+        enemy.HP = enemy.HP - 20;
+    }
+    
+    Move(Int toX, Int toY){
+        this.X = toX;
+        this.Y = toY;
+    }
+    
+    Role(String Name, Int MaxHp, Int MaxMp){
+    this.RoleName = Name;
+    this.Hp = MaxHp;
+    this.Mp = MaxMp;
+    }
+
+}//end Class
+                            </div>
+                            </th>
+                            <th >
+                            <div style="white-space: pre;text-align: left;">
+Class Director{
+    List[Role] AllRoles;
+    List[Grid] AllGrids;
+
+    Start(){
+        AllRoles.Add(new Role(“Eric”, 50, 20));
+        AllRoles.Add(new Role(“Mary”, 30, 80));
+        AllRoles.Add(new Role(“Mon1”, 500, 200));
+        AllRoles.Add(new Role(“Boss”, 500, 200)); 
+        
+        For(true){ //Game Loop 
+            AllRoles[0].move();
+            AllRoles[1].move();
+        }//forLoop-end
+
+    }//Start()-end
+
+}//Class Director-end
+                            </div>
+                        </th>
+                        </tr>
+                        </table>
+以上只是入門級的，如果學多啲，可以<span style="color: white;">search Unity　tutorial</span>的，不解釋了，正常應該大概有個概念的。
+                    </div>
+
+                    <span class="hori-grid smallHoriBanner">
+                        <span style="text-align: center;width: 100%;color: red;">《世界壞人很多，好好保護自己》</span>
+                    </span>
+                </div>
+         </div>
+        
+    </body>
+</html>
