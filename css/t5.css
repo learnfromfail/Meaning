@@ -1,14 +1,21 @@
 * {
     padding: 0;
     margin: 0;
-     /* border-width: 0.1px;  */
+    /* border-width: 0.1px;  */
 }
+
 h2 {
-    font-family:FangSong;
+    font-family: FangSong;
 }
-.column > p {
-    font-family:FangSong;opacity: 1;white-space: pre-wrap;font-size: 13ft;font-weight: bold;
+
+.column>p {
+    font-family: FangSong;
+    opacity: 1;
+    white-space: pre-wrap;
+    font-size: 13ft;
+    font-weight: bold;
 }
+
 .wrap {
     width: 100%;
     height: 100%;
@@ -18,14 +25,19 @@ h2 {
     align-items: center;
     position: relative;
     font-size: 1em;
+
+    border-radius: 25px;
 }
-html, body{
+
+html,
+body {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .row {
     width: 100%;
     height: 100%;
@@ -35,45 +47,94 @@ html, body{
     justify-content: center;
     position: absolute;
 }
-.grid{
+
+.grid {
     background-color: palegreen;
     border-style: solid;
     border-width: 0.1px;
-    color:black;
+    color: black;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
-.grid:hover{
-    background-color:rgba(155,155,155,0.1);
+
+.grid:hover {
+    background-color: rgba(155, 155, 155, 0.1);
 }
-.verti-grid{
-    width: 5.9%;
-    height: 39.9%;
+
+@media screen and (min-width: 768px) {
+    .verti-grid {
+        width: 5.9%;
+        height: 39%;
+    }
+
+    iframe {
+        width: 88%;
+        height: 80%;
+    }
+
+    .smallHoriBanner {
+        display: flex;
+    }
+
+    .alive {
+        display: none;
+    }
 }
-.hori-header-grid{
-    width: 24.90%;/*crash when below 10xx px*/
+
+@media screen and (max-width: 768px) {
+
+    .verti-grid,
+    .hori-header-grid,
+    .hori-footer-grid,
+    .smallHoriBanner,
+    .empty-grid {
+        display: none;
+        visibility: hidden;
+    }
+
+    iframe {
+        width: 100%;
+        height: 90%;
+    }
+
+    .alive {
+        position: absolute;
+        width: 100%;
+        height: 10%;
+        top: 0px;
+        margin: -1px;
+    }
+}
+
+.hori-header-grid {
+    width: 24.70%;
+    /*crash when below 10xx px*/
     height: 10%;
 }
-.hori-footer-grid{
-    width: 24.90%;/*crash when below 10xx px*/
+
+.hori-footer-grid {
+    width: 24.70%;
+    /*crash when below 10xx px*/
     height: 10%;
 }
-.empty-grid{
+
+.empty-grid {
     /* background-color: green; */
     /* opacity: 0.1; */
     border-style: solid;
-    width: 43.90%;
+    width: 43.5%;
     height: 34.95%;
     z-index: -11;
 }
-#centerDiv{
+
+#centerDiv {
     position: absolute;
     /* background-color: violet; */
     width: 100%;
     /* min-height: 92%; */
-    border-radius:25px 25px 25px 25px;
+    border-radius: 25px 25px 25px 25px;
     /* transform: translateY(-25%);
     transform: translateX(-25%); */
     display: flex;
@@ -85,39 +146,47 @@ html, body{
     -webkit-box-shadow: 0 0 20px black;
     box-shadow: 0 0 20px black;
 }
-.beautifulLyric{
-    font-family:Yu Mincho;
+
+.beautifulLyric {
+    font-family: Yu Mincho;
     font-weight: bold;
-    opacity:0.9;
+    opacity: 0.9;
     color: brown;
     /* position: absolute; */
     writing-mode: vertical-rl;
     text-orientation: upright;
     white-space: normal;
-    font-size: 0.95em/*14px;*/
+    font-size: 0.95em
+        /*14px;*/
 }
-.chineseWord{
-    font-family:FangSong;
+
+.chineseWord {
+    font-family: FangSong;
     font-weight: bold;
-    opacity:0.9;
+    opacity: 0.9;
     color: green;
     /* position: absolute; */
     writing-mode: vertical-rl;
     text-orientation: upright;
     white-space: normal;
-    font-size: 0.95em/*14px;*/
+    font-size: 0.95em
+        /*14px;*/
 }
-.mainmenu:hover{
+
+.mainmenu:hover {
     color: yellow;
 }
-.englishWord{
-    font-family:Tahoma;
+
+.englishWord {
+    font-family: Tahoma;
     font-weight: bold;
-    opacity:0.9;
+    opacity: 0.9;
     color: darkred;
     white-space: normal;
-    font-size: 0.9em;/*8px;*/
+    font-size: 0.9em;
+    /*8px;*/
 }
+
 .hori-grid {
     width: 100%;
     height: 15%;
@@ -125,87 +194,147 @@ html, body{
     opacity: 0.8;
     background-color: bisque;
 }
-.PageBackground{
+
+.PageBackground {
     display: flex;
     align-items: flex-start;
     align-self: flex-start;
     justify-content: center;
     position: absolute;
     height: auto;
-    min-height:100%;
+    min-height: 100%;
     width: 100%;
     height: auto;
-    border-radius:25px 25px 25px 25px;
-    background-color:rgba(255,255,255,0.6);
+    border-radius: 25px 25px 25px 25px;
+    /* background-color:rgba(255,255,255,0.6); */
     white-space: pre;
 }
+
 /* Create two equal columns that floats next to each other */
-.column {
-    float:center;
-    width: 32.5%;
-    min-height: 92%;
-    height: auto;
-    border: 1px solid grey;
-  }
-  /* Clear floats after the columns */
-  .row:after {
+@media screen and (max-width: 768px) {
+    .column {
+        /* float:center; */
+        display: inline-block;
+        width: 100%;
+        min-height: 40%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.6);
+        border: 1px solid grey;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .column {
+        float: center;
+        /* display: flex; */
+        max-width: 33.3%;
+        width: 100%;
+        min-height: 92%;
+        border: 1px solid grey;
+        margin: -1px;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+/* Clear floats after the columns */
+.row:after {
     /* content: ""; */
     /* display: table; */
     /* clear: both; */
-  }
- .small-grid { 
+}
+
+.small-grid {
     width: 10.81%;
     height: 95%;
     background-color: palegoldenrod;
-   
+
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     border: 1px solid black;
     font-size: 60px
- }
- .borderimg1 { 
+}
+
+.borderimg1 {
     border: 15px solid transparent;
     padding: 0px;
     border-image: url(../img/borderArt4.png) 50 round;
     -moz-box-shadow: 0 0 20px black;
     -webkit-box-shadow: 0 0 20px black;
     box-shadow: 0 0 20px black;
-  }
-  .linkWritings {
-    display: flex;
+}
+
+.linkWritings {
+    display: inline-block;
     justify-content: start;
-    font-family:Yu Mincho;
+    font-family: Yu Mincho;
     font-weight: bold;
-  }
-  .smallHoriBanner{
+}
+
+.smallHoriBanner {
     white-space: normal;
     font-weight: bold;
     height: 3%;
-    display:flex;
+    /* display:flex; */
     align-items: center;
     font-size: 3%;
     white-space: normal;
-  }
-  .writingPassage{
-    height:auto;
-    min-height:92.9%;
+}
+
+.writingPassage {
+    height: auto;
+    min-height: 92.9%;
     border: 1px solid white;
     width: 100%;
     font-size: 1em;
     color: goldenrod;
-    font-family:FangSong;
+    font-family: FangSong;
     font-weight: bold;
-    background-color:rgba(0,0,0,0.6);
-  }
-.backgroundLyric{
-    min-height: 100%;height:auto;
-    width:100%;
-    font-size:17px;padding-left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.backgroundLyric {
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    font-size: 17px;
+    padding-left: 10px;
     position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
     opacity: 1;
+}
+
+.foreverIsMoment {
+    position: fixed;
+    min-height: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: red;
+    font-weight: bolder;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.foreverIsMomentBG {
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    font-size: 17px;
+    padding-left: 10px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    opacity: 1;
+}
+
+.remindWords {
+    text-align: center;
+    width: 100%;
+    color: red;
 }
