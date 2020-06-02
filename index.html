@@ -11,9 +11,11 @@
         <meta http-equiv="Pragma" content="no-cache" />
         <META HTTP-EQUIV="EXPIRES" CONTENT="0">
         <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+        <script src="./js/jquery-3.5.1.min.js"></script>
         <script>
         window.onload=  function(){
             // alert("本網站暫不支持手機瀏覽，如果更好的使用者體驗，請複製網址到電腦上的瀏覽器，或者手機設定：電腦，網頁板！");
+            //document.getElementsByName("CoreContent")[0].src = "./indexInner.html?"+Math.random();
             document.getElementsByName("CoreContent")[0].src = "./indexInner.html?"+Math.random();
         }
         function displayPage(url){
@@ -25,7 +27,6 @@
         <div class="wrap" style="z-index: 5;">
             <div class="row">
                 <div class="grid hori-header-grid" style="display: flex;align-items: center;justify-content: center;">
-                  <!-- <span style="color:red;font-size: 10px;">▼大吉</span> -->
                   <span class="chineseWord" style="color:red;padding-right: 3%;">宜:雙贏<br>愛惜自己<br>陪伴家人<br>求知實幹<br>積極開朗<br>愛人助人<br>人我合一<br></span>
                   <span class="chineseWord" style="color:black;">忌:零和<br>自殺殺人<br>害人自利<br>毒宅抑鬱<br>浪費時間<br>欺善怕惡<br></span>
                 </div>
@@ -39,7 +40,6 @@
                         <div class="chineseWord mainmenu"><a href="mailto:erickwokhs@gmail.com">《聯絡》</a></div>
                         <div class="chineseWord mainmenu"><a href='javascript:displayPage("./targets.html")'>《目標》</a></div>
                         <div class="chineseWord mainmenu"><a href='javascript:displayPage("./collections.html")'>《喜好》</a></div>
-                        <!-- <div class="chineseWord mainmenu"><a javascript:displayPage(./indexInner.html" style="color:red">《》</a></div> -->
                         <div class="chineseWord mainmenu"><a href='javascript:displayPage("./profolio.html")'>《作品》</a></div>
                         <div class="chineseWord mainmenu"><a href='javascript:displayPage("./writings.html")'>《寫作》</a></div>
                         <div class="chineseWord mainmenu"><a href='javascript:displayPage("./myself.html")'>《本人》</a></div>
@@ -48,27 +48,61 @@
                     </div>
                 </div>
                 <div class="grid hori-header-grid" style="white-space: normal;display: flex;justify-content: center;">
-                    <!-- <div>一陰一陽　相愛　謂之　道</div> -->
                     <!-- <audio controls autoplay>
                         <source src="./others/fortress.mp3" autostart="true" volume="10">
                       Your browser does not support the audio element.
                       </audio> -->
                 </div>
-                <div class="grid alive" style="white-space: normal;display: flex;justify-content: center;">
-    
+                <div class="grid alive" style="white-space: normal;border-bottom: 5px solid greenyellow;margin-top:0px;">
+                    <div style="width: 20%;display: flex;justify-content: flex-end;"><img src="./img/Rose-flower-icon.png" style="width: 110%;height: 110%;z-index: 1000;"></div>
+                    <div style="width:60%;display: flex;justify-content:center;margin-top: 15px;">
+                        <span style="color: red;font-weight: bolder;font-size: 25px;font-family:Yu Mincho;-webkit-transform: rotate(-10deg);">遊&nbsp;</span>
+                        <span style="color: blue;font-weight: bolder;font-size: 30px;font-family:Yu Mincho;"> 靜&nbsp;</span>
+                        <span style="color: forestgreen;font-weight: bolder;font-size: 25px;font-family:Yu Mincho;-webkit-transform: rotate(-5deg);">學&nbsp;</span>
+                        <span style="color: black;font-weight: bolder;font-size: 25px;font-family:Yu Mincho;-webkit-transform: rotate(0deg);">舍</span>
+                    </div>
+                    <div style="width:20%;display: flex;justify-content: flex-end;">
+                        <div class="menu-icon" id="menu-ching" style="margin:5px 15px 0 0;padding:10px;background-color: rgba(244, 244, 244, 0.4);" onclick="changeMenuImage()">
+                            <span class="line">&nbsp;</span>
+                            <span class="line">&nbsp;</span>
+                            <span class="line">&nbsp;</span>
+                        </div>
+                    </div>
                 </div>
-            <!-- </div>
-            <div class="row"> -->
+                <div class="grid alive aliveSon" id="turnMeOn" style="top: 8%;z-index: 1000;width: 99%;display: none;">
+                    <ul style="text-align: center;width: 100%;">
+                        <li><a href="mailto:erickwokhs@gmail.com">《聯絡》</a></li>
+                        <li><a href='javascript:displayPage("./collections.html");changeMenuImage();'>《喜好》</a></li>
+                        <li><a href='javascript:displayPage("./profolio.html");changeMenuImage();'>《作品》</a></li>
+                        <li><a href='javascript:displayPage("./writings.html");changeMenuImage();'>《寫作》</a></li>
+                        <li><a href='javascript:displayPage("./myself.html");changeMenuImage();'>《本人》</a></li>
+                        <li><a href='javascript:displayPage("./thisWeb.html");changeMenuImage();'>《本站》</a></li>
+                        <li><a href='javascript:displayPage("./indexInner.html");changeMenuImage();'>《首頁》</a></li>
+                    </ul>
+                </div>
+                <script>
+                    var isOn = false;
+                    function changeMenuImage(){
+                        if(!isOn) {
+                            $("#menu-ching .line").css('background-color', 'white');
+                            $("#turnMeOn").css('display','');
+                            $("#turnMeOn ul").css('display','');
+                        }else{
+                            $("#menu-ching .line").css('background-color', 'black');
+                            $("#turnMeOn").css('display','none');
+                            $("#turnMeOn ul").css('display','none');
+                        }
+                        isOn = !isOn;
+                    }
+                </script>
                 <div class="grid verti-grid chineseWord">
                     使負棟之柱，多於南畝之農夫。架梁之椽，多於機上之工女。釘頭磷磷，多於在庾之粟粒。
                 </div>
                 <div class="grid empty-grid">a</div>
                 <div class="grid empty-grid">b</div>
                 <div class="grid verti-grid chineseWord">
-                    一人之心，千萬人之心也。秦愛紛奢，人亦念其家。奈何取之盡<!--span style="color:white"></span-->錙銖，用之如泥沙！
+                    一人之心，千萬人之心也。秦愛紛奢，人亦念其家。奈何取之盡錙銖，用之如泥沙！
                 </div>
-            <!-- </div>
-            <div class="row" > -->
                 <div class="grid verti-grid chineseWord">
                     瓦縫參差，多於周身之帛縷；直欄橫檻，多於九土之城郭。管絃嘔啞，多於市人之言語。
                 </div>
@@ -77,8 +111,6 @@
                 <div class="grid verti-grid chineseWord">
                     使天下之人，不敢言而敢怒。獨夫之心，日益驕固。戍卒叫，函谷舉。楚人一炬，可憐焦土。
                 </div>
-            <!-- </div>
-            <div class="row"> -->
                 <div class="grid hori-footer-grid" style="position: relative;">
                     <div class="beautifulLyric">
                         天地父母情人朋友子女仁禮信義智人權博愛平等公義自由人人為我我為人人世界和平大吉大利天地萬物花開盛世
@@ -106,25 +138,18 @@
                     </div>
                 </div>
             </div>
-            <!-- <div id="centerDiv">
-                <img src="./img/flowerForest.jpg" class="bg"
-                style="width: 99.5%;height:99.5%;position: fixed;z-index: -5;
-                max-width: 100%;max-height: 900px;">
-            </div> -->
             <img src="./img/flowerForest.jpg" class="bg"
             style="width: 99.5%;height:99.5%;position: fixed;z-index: -5;">
-            <!-- 
-                max-width: 1300px;
-                min-width: 1300px;
-                max-height: 800px;
-                min-height: 600px; 
-            -->
-            <iframe name="CoreContent" style="border-radius:25px;top:10%;position: absolute;border: none;
-            -moz-box-shadow: 0 0 20px black;
-            -webkit-box-shadow: 0 0 20px;box-shadow: 0 0 20px black;" >
+            <iframe name="CoreContent" style="border-radius:25px;position: absolute;border: none;" >
                 hello
             </iframe>
         </div>
     </body>
 </html>
-
+<!-- 
+    max-width: 1300px;
+    min-width: 1300px;
+    max-height: 800px;
+    min-height: 600px; 
+-->
+<!-- <div class="chineseWord mainmenu"><a javascript:displayPage(./indexInner.html" style="color:red">《》</a></div> -->
