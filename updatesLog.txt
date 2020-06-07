@@ -1,5 +1,5 @@
 ６月３日：
-支持流動裝置，但不包括Ipad, (iphone未測試)
+支持流動裝置，但不包括Ipad, (iphone未測試),加了一雜類文章!
 ５月２７日：
 subtie changes in indexinner.html
 ５月１０日：
